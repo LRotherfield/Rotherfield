@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Rotherfield Freelance PHP Development{% endblock %}</title>
+        
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+        <script type="text/javascript">google.load("jquery","1");google.load("jqueryui","1");</script>
+        {% javascripts "@RothersStaticBundle/Resources/public/js/jQuery.radmenu.min.js" output="bundles/RothersStaticBundle/js/radial.js"%}
+            <script src="{{ asset_url }}" ></script>
+        {% endjavascripts %}
+        
+        {% block stylesheets %}
+            {% stylesheets "@RothersStaticBundle/Resources/public/css/radial.css" output="bundles/RothersStaticBundle/css/radial.css"%}
+                <link href="{{ asset_url }}" rel="stylesheet"  />
+            {% endstylesheets %}
+        {% endblock %}
+        
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        <script>
+            {% block javascripts %}{% endblock %}
+        </script>
+    </body>
+</html>
