@@ -1,20 +1,28 @@
 {% extends "RothersStaticBundle::layout.html.twig" %}
 {% block body %}
     {{parent()}}
-<a href="#" id="next">next</a>
-<a href="#" id="prev">prev</a>
     <div id='radial_container'>
         <ul class='list'>
-            <li class='item'>	<div class='my_class active'>  Vale&nbsp;Blinds  </div>	</li>
-            <li class='item'>	<div class='my_class'>  BIDA  </div>	</li>
-            <li class='item'>	<div class='my_class'>  Garden&nbsp;of&nbsp;Cardiff  </div>	</li>
-            <li class='item'>	<div class='my_class'>  The&nbsp;Construction&nbsp;Hub  </div>	</li>
-            <li class='item'>	<div class='my_class'>  Pavehunter  </div>	</li>
-            <li class='item'>	<div class='my_class'>  Pavehunter  </div>	</li>
-            <li class='item'>	<div class='my_class'>  Rhooms  </div>	</li>
-            <li class='item'>	<div class='my_class'>  Vacation&nbsp;club  </div>	</li>
+            <li class='item'>	<div data-desc="vb" class='my_class active'>  Vale&nbsp;Blinds  </div>	</li>
+            <li class='item'>	<div data-desc="bi" class='my_class'>  BIDA  </div>	</li>
+            <li class='item'>	<div data-desc="gc" class='my_class'>  Garden&nbsp;of&nbsp;Cardiff  </div>	</li>
+            <li class='item'>	<div data-desc="ch" class='my_class'>  The&nbsp;Construction&nbsp;Hub  </div>	</li>
+            <li class='item'>	<div data-desc="ph" class='my_class'>  Pavehunter  </div>	</li>
+            <li class='item'>	<div data-desc="p2" class='my_class'>  Pavehunter  </div>	</li>
+            <li class='item'>	<div data-desc="rh" class='my_class'>  Rhooms  </div>	</li>
+            <li class='item'>	<div data-desc="vc" class='my_class'>  Vacation&nbsp;club  </div>	</li>
         </ul>
     </div>
+<div class="descriptions">
+    <div class="vb">test 1</div>
+    <div class="bi">test 2</div>
+    <div class="gc">test 3</div>
+    <div class="ch">test 4</div>
+    <div class="ph">test 5</div>
+    <div class="p2">test 6</div>
+    <div class="rh">test 7</div>
+    <div class="vc">test 8</div>
+</div>
 {% endblock %}
 {% block javascripts %}
     {{parent()}}
@@ -23,31 +31,31 @@
             listClass: 'list', // the list class to look within for items
             itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
             radius: 120, // radius in pixels
-            animSpeed:400, // animation speed in millis
+            animSpeed:300, // animation speed in millis
+            animEasing: "linear",
             centerX: 30, // the center x axis offset
             centerY: 50, // the center y axis offset
             //rotate: true,
             activeItemClass: "active",
-            afterAnimation: function($m){
-            var test = $m.raditems().get(0);
-            $('div.my_class').removeClass("active")
-            $(test).find('div.my_class').addClass("active");
-            },
             selectEvent: "click", // the select event (click)
             onSelect: function($selected){ // show what is returned 
-            var rotations = 8-$selected.index();
+                var item = $("#radial_container").radmenu("items").get($selected.index());
+                $('div.my_class').removeClass("active")
+                var desc = $(item).find('div.my_class').addClass("active").data('desc');
+                $('div.descriptions div').removeClass("show");
+                $('div.descriptions div.'+desc).addClass("show");
+                var direction = "next";
+                var rotations = 8-$selected.index();
+                if($selected.index() <= 3){
+                    rotations = $selected.index();
+                    direction = "prev";
+                }
                 for(var i = 0; i < rotations; i++){
-                    $("#radial_container").radmenu("next");
+                    $("#radial_container").radmenu(direction);
                 }
             },
             angleOffset: 0 // in degrees
         });
         $("#radial_container").radmenu("show");
-        $("#next").click(function(){
-            $("#radial_container").radmenu("next");
-        });
-        $("#prev").click(function(){
-            $("#radial_container").radmenu("prev");
-        });
     });
 {% endblock %}
