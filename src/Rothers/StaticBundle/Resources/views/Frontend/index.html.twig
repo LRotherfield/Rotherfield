@@ -1,4 +1,7 @@
 {% extends "RothersStaticBundle::layout.html.twig" %}
+{% block header %}
+<h1>Rotherfield Freelance</h1>
+{% endblock %}
 {% block body %}
     {{parent()}}
     <div id='radial_container'>
@@ -8,7 +11,7 @@
             <li class='item'>	<div data-desc="gc" class='my_class'>  Garden&nbsp;of&nbsp;Cardiff  </div>	</li>
             <li class='item'>	<div data-desc="ch" class='my_class'>  The&nbsp;Construction&nbsp;Hub  </div>	</li>
             <li class='item'>	<div data-desc="ph" class='my_class'>  Pavehunter  </div>	</li>
-            <li class='item'>	<div data-desc="p2" class='my_class'>  Pavehunter  </div>	</li>
+            <li class='item'>	<div data-desc="jk" class='my_class'>  John&nbsp;Kinch&nbsp;Builds  </div>	</li>
             <li class='item'>	<div data-desc="rh" class='my_class'>  Rhooms  </div>	</li>
             <li class='item'>	<div data-desc="vc" class='my_class'>  Vacation&nbsp;club  </div>	</li>
         </ul>
@@ -32,11 +35,33 @@
         <p>Vestibulum tempor iaculis enim, sed dignissim velit sodales sit amet.  Praesent aliquet orci non metus volutpat volutpat. Maecenas gravida laoreet nisi, non aliquet tellus mollis at. Mauris mollis suscipit odio nec dignissim. Praesent mattis mollis mauris, quis sagittis sem volutpat non.</p>
         <p>Viverra adipiscing rhoncus. Pellentesque eget lectus non risus aliquam faucibus. Duis mollis leo vel dui lobortis sed pretium nunc imperdiet. Donec tincidunt commodo consectetur. Praesent mollis elementum arcu, at adipiscing justo ultrices at. Mauris eu est ligula, sit amet semper ipsum. </p>
     </div>
-    <div class="ch">test 4</div>
-    <div class="ph">test 5</div>
-    <div class="p2">test 6</div>
-    <div class="rh">test 7</div>
-    <div class="vc">test 8</div>
+    <div class="ch">
+        <h2>The Construction Hub</h2>
+        <p>Vestibulum tempor iaculis enim, sed dignissim velit sodales sit amet.  Lobortis in magna. Proin arcu odio, mollis in interdum at, pretium dignissim turpis. </p>
+        <p>Viverra adipiscing rhoncus. Pellentesque eget lectus non risus aliquam faucibus. Duis mollis leo vel dui lobortis sed pretium nunc imperdiet. Donec tincidunt commodo consectetur. Praesent mollis elementum arcu, at adipiscing justo ultrices at. Mauris eu est ligula, sit amet semper ipsum. </p>
+    </div>
+    <div class="ph">
+        <h2>Pavehunter</h2>
+        <p>Proin arcu odio, mollis in interdum at, pretium dignissim turpis. </p>
+        <p>Vestibulum tempor iaculis enim, sed dignissim velit sodales sit amet.  Praesent aliquet orci non metus volutpat volutpat. Maecenas gravida laoreet nisi, non aliquet tellus mollis at. Mauris mollis suscipit odio nec dignissim. Praesent mattis mollis mauris, quis sagittis sem volutpat non.</p>
+    </div>
+    <div class="jk">
+        <h2>John Kinch Builds</h2>
+        <p>Lobortis in magna. Proin arcu odio, mollis in interdum at, pretium dignissim turpis. </p>
+        <p>Vestibulum tempor iaculis enim, sed dignissim velit sodales sit amet.  Praesent aliquet orci non metus volutpat volutpat. Maecenas gravida laoreet nisi, non aliquet tellus mollis at. Mauris mollis suscipit odio nec dignissim. Praesent mattis mollis mauris, quis sagittis sem volutpat non.</p>
+        <p>Viverra adipiscing rhoncus. Pellentesque eget lectus non risus aliquam faucibus. Duis mollis leo vel dui lobortis sed pretium nunc imperdiet. Donec tincidunt commodo consectetur. Praesent mollis elementum arcu, at adipiscing justo ultrices at. Mauris eu est ligula, sit amet semper ipsum. </p>
+    </div>
+    <div class="rh">
+        <h2>Rhooms</h2>
+        <p>Proin arcu odio, mollis Lobortis in magna. Proin arcu odio, mollis in interdum at, pretium dignissim turpis. </p>
+        <p>Vestibulum tempor iaculis enim, sed dignissim velit sodales sit amet.  Praesent aliquet orci non metus volutpat volutpat. Maecenas gravida laoreet nisi, non aliquet tellus mollis at. Mauris mollis suscipit odio nec dignissim. Praesent mattis mollis mauris, quis sagittis sem volutpat non.</p>
+        <p>Viverra adipiscing rhoncus. Pellentesque eget lectus non risus aliquam faucibus. Duis mollis leo vel dui lobortis sed pretium nunc imperdiet. Donec tincidunt commodo consectetur. Praesent mollis elementum arcu, at adipiscing justo ultrices at. Mauris eu est ligula, sit amet semper ipsum. </p>
+    </div>
+    <div class="vc">
+        <h2>Vacation Club</h2>
+        <p>Praesent aliquet orci non metus volutpat volutpat. Maecenas gravida laoreet nisi, non aliquet tellus mollis at. Mauris mollis suscipit odio nec dignissim. Praesent mattis mollis mauris, quis sagittis sem volutpat non.</p>
+        <p>Viverra adipiscing rhoncus. Pellentesque eget lectus non risus aliquam faucibus. Duis mollis leo vel dui lobortis sed pretium nunc imperdiet. Donec tincidunt commodo consectetur. Praesent mollis elementum arcu, at adipiscing justo ultrices at. Mauris eu est ligula, sit amet semper ipsum. </p>
+    </div>
 </div>
 {% endblock %}
 {% block javascripts %}

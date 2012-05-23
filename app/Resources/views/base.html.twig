@@ -11,7 +11,11 @@
         {% endjavascripts %}
         
         {% block stylesheets %}
-            {% stylesheets "@RothersStaticBundle/Resources/public/css/radial.css" output="bundles/RothersStaticBundle/css/radial.css"%}
+            {% stylesheets "@RothersStaticBundle/Resources/public/css/reset.css" output="bundles/rothersstatic/css/reset.css"%}
+                <link href="{{ asset_url }}" rel="stylesheet"  />
+            {% endstylesheets %}
+            <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+            {% stylesheets "@RothersStaticBundle/Resources/public/css/style.css" output="bundles/rothersstatic/css/style.css"%}
                 <link href="{{ asset_url }}" rel="stylesheet"  />
             {% endstylesheets %}
         {% endblock %}
@@ -20,18 +24,18 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="header">
+            <header class="header">
                 {% block header %}{% endblock %}
                 <div class="cb"></div>
-            </div>            
-            <div class="body">
+            </header>            
+            <section class="body">
                 {% block body %}{% endblock %}
                 <div class="cb"></div>
-            </div>            
-            <div class="footer">
+            </section>            
+            <dfooter class="footer">
                 {% block footer %}{% endblock %}
                 <div class="cb"></div>
-            </div>            
+            </footer>            
             <div class="cb"></div>
         </div>
         <script>
