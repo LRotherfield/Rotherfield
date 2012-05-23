@@ -19,7 +19,21 @@
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="wrapper">
+            <div class="header">
+                {% block header %}{% endblock %}
+                <div class="cb"></div>
+            </div>            
+            <div class="body">
+                {% block body %}{% endblock %}
+                <div class="cb"></div>
+            </div>            
+            <div class="footer">
+                {% block footer %}{% endblock %}
+                <div class="cb"></div>
+            </div>            
+            <div class="cb"></div>
+        </div>
         <script>
             {% block javascripts %}{% endblock %}
         </script>
