@@ -1,0 +1,61 @@
+{% extends "PortfolioBundle::layout.html.twig" %}
+{% block header %}
+<h1>Rotherfield Freelance</h1>
+{% endblock %}
+{% block body %}
+    {{parent()}}
+    <div id='radial_container'>
+        <ul class='list'>
+            {% for entity in entities %}
+                <li class='item'>	
+                    <div data-desc="{{ entity.reference }}" class='my_class {% if loop.index == 1 %}active{% endif %}'>
+                        {{ entity.name }}
+                    </div>	
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="descriptions">
+        {% for entity in entities %}
+            <div class="{{ entity.reference }} {% if loop.index == 1 %}show{% endif %}">	
+                <h2>{{ entity.title }}</h2>
+                {{ entity.description|raw }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{parent()}}
+    $(document).ready(function(){
+        $("#radial_container").radmenu({
+            listClass: 'list', // the list class to look within for items
+            itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
+            radius: 120, // radius in pixels
+            animSpeed:300, // animation speed in millis
+            animEasing: "linear",
+            centerX: 150, // the center x axis offset
+            centerY: 200, // the center y axis offset
+            rotate: true,
+            activeItemClass: "active",
+            selectEvent: "click", // the select event (click)
+            onSelect: function($selected){ // show what is returned 
+                var item = $("#radial_container").radmenu("items").get($selected.index());
+                $('div.my_class').removeClass("active")
+                var desc = $(item).find('div.my_class').addClass("active").data('desc');
+                $('div.descriptions div').removeClass("show");
+                $('div.descriptions div.'+desc).addClass("show");
+                var direction = "next";
+                var rotations = 8-$selected.index();
+                if($selected.index() <= 3){
+                    rotations = $selected.index();
+                    direction = "prev";
+                }
+                for(var i = 0; i < rotations; i++){
+                    $("#radial_container").radmenu(direction);
+                }
+            },
+            angleOffset: 0 // in degrees
+        });
+        $("#radial_container").radmenu("show");
+    });
+{% endblock %}

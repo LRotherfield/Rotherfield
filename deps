@@ -61,3 +61,7 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[UserBundle]
+    git=http://github.com/LRotherfield/UserBundle.git
+    target=/bundles/Rothers/UserBundle

@@ -6,16 +6,16 @@
         
         <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
         <script type="text/javascript">google.load("jquery","1");google.load("jqueryui","1");</script>
-        {% javascripts "@RothersStaticBundle/Resources/public/js/jQuery.radmenu.min.js" output="bundles/RothersStaticBundle/js/radial.js"%}
+        {% javascripts "@PortfolioBundle/Resources/public/js/jQuery.radmenu.min.js" output="bundles/RothersStaticBundle/js/radial.js"%}
             <script src="{{ asset_url }}" ></script>
         {% endjavascripts %}
         
         {% block stylesheets %}
-            {% stylesheets "@RothersStaticBundle/Resources/public/css/reset.css" output="bundles/rothersstatic/css/reset.css"%}
+            {% stylesheets "@PortfolioBundle/Resources/public/css/reset.css" output="bundles/portfolio/css/reset.css"%}
                 <link href="{{ asset_url }}" rel="stylesheet"  />
             {% endstylesheets %}
             <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-            {% stylesheets "@RothersStaticBundle/Resources/public/css/style.css" output="bundles/rothersstatic/css/style.css"%}
+            {% stylesheets "@PortfolioBundle/Resources/public/css/style.css" output="bundles/portfolio/css/style.css"%}
                 <link href="{{ asset_url }}" rel="stylesheet"  />
             {% endstylesheets %}
         {% endblock %}

@@ -1,0 +1,37 @@
+<?php
+
+namespace Oxygen\UserExtensionBundle\Entity;
+
+use Oxygen\UserBundle\Entity\User as BaseEntity;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+/**
+ * Oxygen\UserExtensionBundle\Entity\User
+ * @ORM\Entity(repositoryClass="Oxygen\UserBundle\Entity\UserRepository")
+ * @ORM\Table(name="user")
+ */
+class User extends BaseEntity {
+
+  /**
+   * @var integer $customer
+   *
+   * @ORM\OneToOne(targetEntity="Oxygen\UserExtensionBundle\Entity\Customer", mappedBy="user");
+   */
+  private $customer;
+
+  /**
+   * @var integer $agent
+   *
+   * @ORM\OneToOne(targetEntity="Oxygen\UserExtensionBundle\Entity\Agent", mappedBy="user");
+   */
+  private $agent;
+
+  /**
+   * @var integer $admin
+   *
+   * @ORM\OneToOne(targetEntity="Oxygen\UserExtensionBundle\Entity\Admin", mappedBy="user");
+   */
+  private $admin;
+  
+}

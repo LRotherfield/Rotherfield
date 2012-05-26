@@ -1,0 +1,50 @@
+<h1>User list</h1>
+<form method="post">
+    {{ form_rest(form) }}
+    <input type="submit" name="submit-filter" value="filter" />
+ </form>
+<div class="navigation">
+    {{ pagination.render()|raw }}
+</div>
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>{{ pagination.sortable('Id', 'u.id')|raw }}</th>
+            <th>{{ pagination.sortable('Created At', 'u.created')|raw }}</th>
+            <th>Updated At</th>
+            <th>{{ pagination.sortable('Username', 'u.username')|raw }}</th>
+            <th>Enabled</th>
+            <th>{{ pagination.sortable('Roles', 'r.name')|raw }}</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in pagination %}
+        <tr>
+            <td>{{ entity.id }}</td>
+            <td>{% if entity.created %}{{ entity.created|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{% if entity.updated %}{{ entity.updated|date('Y-m-d H:i:s') }}{% endif%}</td>
+            <td>{{ entity.username }}</td>
+            <td>{{ entity.active }}</td>
+            <td>{{ entity.roles|join(', ') }}</td>
+
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('edit_user', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                    <li>
+                        <form action="{{ path('delete_user', { 'id': entity.id })}}" method="post">
+                            {{ form_widget(entity.deleteForm) }}
+                            <button type="submit">delete</button>
+                        </form>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<div class="navigation">
+    {{ pagination.render()|raw }}
+</div>

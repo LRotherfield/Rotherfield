@@ -1,5 +1,5 @@
 RothersStaticBundle:
-    resource: "@RothersStaticBundle/Controller/"
+    resource: "@PortfolioBundle/Controller/"
     type:     annotation
     prefix:   /
 
