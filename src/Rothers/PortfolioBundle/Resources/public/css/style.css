@@ -18,12 +18,12 @@ header.header{
 }
 header h1{
     font-size: 20px;
-    padding: 17px 0;
+    padding: 17px 0 0 0;
     float: left;
 }
 header h2{
     font-size: 20px;
-    padding: 17px 40px;
+    padding: 17px 0 0 40px;
     float: left;
 }
 section h2{
