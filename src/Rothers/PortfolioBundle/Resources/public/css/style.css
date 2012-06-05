@@ -21,6 +21,11 @@ header h1{
     padding: 17px 0;
     float: left;
 }
+header h2{
+    font-size: 18px;
+    padding: 18px 40px;
+    float: left;
+}
 section h2{
     font-size: 18px;
     padding: 5px 0;

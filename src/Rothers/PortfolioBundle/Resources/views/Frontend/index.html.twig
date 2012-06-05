@@ -1,7 +1,4 @@
 {% extends "PortfolioBundle::layout.html.twig" %}
-{% block header %}
-<h1>Rotherfield Freelance</h1>
-{% endblock %}
 {% block body %}
     {{parent()}}
     <div id='radial_container'>
@@ -19,7 +16,10 @@
         {% for entity in entities %}
             <div class="{{ entity.reference }} {% if loop.index == 1 %}show{% endif %}">	
                 <h2>{{ entity.title }}</h2>
-                {{ entity.description|raw }}
+                {{ entity.excerpt|raw }}
+                <p>
+                    <a href="{{ path("portfolio_show", { "name": entity.name }) }}">Full {{ entity.name }} description</a>
+                </p>
             </div>
         {% endfor %}
     </div>
