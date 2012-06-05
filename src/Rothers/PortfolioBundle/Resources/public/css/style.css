@@ -1,6 +1,6 @@
 body{
     background: url('/bundles/portfolio/images/bg.png');
-    font-family: 'Droid Serif', serif;
+    font-family: 'Droid Sans', serif;
     font-size: 14px;
     line-height: 16px;
 }
@@ -18,12 +18,13 @@ header.header{
 }
 header h1{
     font-size: 20px;
-    padding: 17px 0 0 0;
+    padding: 15px 0 0 0;
     float: left;
+    line-height: 22px;
 }
 header h2{
     font-size: 20px;
-    padding: 17px 0 0 40px;
+    padding: 15px 0 0 40px;
     float: left;
     line-height: 22px;
 }
@@ -36,7 +37,7 @@ p{
     padding: 5px 0;
 }
 li{
-    margin-left: 15px;
+    margin-left: 20 px;
     list-style: circle;
 }
 
