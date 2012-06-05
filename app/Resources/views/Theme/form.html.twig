@@ -25,20 +25,6 @@
   </div>
 {% endblock %}
 
-{% block oxygen_custom_file_widget %}
-{% spaceless %}
-    <div class="show">      
-    {% if value %}
-        {% for val in value|string_to_array('|') %}
-            {{ media_show(val) }}    
-        {% endfor %}
-    {% endif %}
-    </div>
-    <input type="hidden" {{ block('widget_attributes') }} value="{{ value }}" />
-    {{ media_system(id, true) }}
-{% endspaceless %}
-{% endblock oxygen_custom_file_widget %}
-
 {% block generic_label %}
   {% spaceless %}
     {% if required %}

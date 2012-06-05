@@ -12,7 +12,7 @@ use Rothers\PortfolioBundle\Form\PortfolioType;
 /**
  * Portfolio controller.
  *
- * @Route("/portfolio")
+ * @Route("/admin/portfolio")
  */
 class PortfolioController extends Controller
 {

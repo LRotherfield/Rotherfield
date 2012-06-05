@@ -8,7 +8,7 @@
         <ul class='list'>
             {% for entity in entities %}
                 <li class='item'>	
-                    <div data-desc="{{ entity.reference }}" class='my_class {% if loop.index == 1 %}active{% endif %}'>
+                    <div data-desc="{{ entity.reference }}" class='spinner {% if loop.index == 1 %}active{% endif %}'>
                         {{ entity.name }}
                     </div>	
                 </li>
@@ -30,7 +30,7 @@
         $("#radial_container").radmenu({
             listClass: 'list', // the list class to look within for items
             itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
-            radius: 120, // radius in pixels
+            radius: 90, // radius in pixels
             animSpeed:300, // animation speed in millis
             animEasing: "linear",
             centerX: 150, // the center x axis offset
@@ -40,8 +40,8 @@
             selectEvent: "click", // the select event (click)
             onSelect: function($selected){ // show what is returned 
                 var item = $("#radial_container").radmenu("items").get($selected.index());
-                $('div.my_class').removeClass("active")
-                var desc = $(item).find('div.my_class').addClass("active").data('desc');
+                $('div.spinner').removeClass("active")
+                var desc = $(item).find('div.spinner').addClass("active").data('desc');
                 $('div.descriptions div').removeClass("show");
                 $('div.descriptions div.'+desc).addClass("show");
                 var direction = "next";
