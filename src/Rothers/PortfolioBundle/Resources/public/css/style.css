@@ -22,8 +22,8 @@ header h1{
     float: left;
 }
 header h2{
-    font-size: 18px;
-    padding: 18px 40px;
+    font-size: 22px;
+    padding: 17px 40px;
     float: left;
 }
 section h2{
@@ -32,6 +32,10 @@ section h2{
 }
 p{
     padding: 5px 0;
+}
+li{
+    margin-left: 15px;
+    list-style: circle;
 }
 
 section.body{
