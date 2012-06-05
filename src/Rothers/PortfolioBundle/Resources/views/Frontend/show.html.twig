@@ -6,8 +6,8 @@
 {% block body %}
     {{parent()}}
 <div>
-    <p><a href="{{ path("portfolio_index") }}">Back to portfolio index</a></p>
+    <p><a href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
     {{portfolio.description|raw}}
-    <p><a href="{{ path("portfolio_index") }}">Back to portfolio index</a></p>
+    <p><a href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
 </div>
 {% endblock %}

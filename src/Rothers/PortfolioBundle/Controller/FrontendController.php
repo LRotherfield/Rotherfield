@@ -13,7 +13,7 @@ class FrontendController extends Controller
 {
 
     /**
-     * @Route("", name="portfolio_index")
+     * @Route("", name="frontend_portfolio_index")
      * @Template()
      */
     public function indexAction()
@@ -24,7 +24,7 @@ class FrontendController extends Controller
     }
 
     /**
-     * @Route("portfolio/{name}", name="portfolio_show")
+     * @Route("portfolio/{name}", name="frontend_portfolio_show")
      * @Template()
      */
     public function showAction($name)
