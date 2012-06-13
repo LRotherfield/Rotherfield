@@ -1,13 +1,11 @@
 {% extends "PortfolioBundle::layout.html.twig" %}
 {% block body %}
     {{parent()}}
-    <div id='radial_container'>
+    <div id='portfolio'>
         <ul class='list'>
             {% for entity in entities %}
-                <li class='item'>	
-                    <div data-desc="{{ entity.reference }}" class='spinner {% if loop.index == 1 %}active{% endif %}'>
+                <li class="link {% if loop.index == 1 %}active{% endif %}" data-desc="{{ entity.reference }}">	
                         {{ entity.name }}
-                    </div>	
                 </li>
             {% endfor %}
         </ul>
@@ -27,35 +25,11 @@
 {% block javascripts %}
     {{parent()}}
     $(document).ready(function(){
-        $("#radial_container").radmenu({
-            listClass: 'list', // the list class to look within for items
-            itemClass: 'item', // the items - NOTE: the HTML inside the item is copied into the menu item
-            radius: 90, // radius in pixels
-            animSpeed:300, // animation speed in millis
-            animEasing: "linear",
-            centerX: 110, // the center x axis offset
-            centerY: 160, // the center y axis offset
-            rotate: true,
-            activeItemClass: "active",
-            selectEvent: "click", // the select event (click)
-            onSelect: function($selected){ // show what is returned 
-                var item = $("#radial_container").radmenu("items").get($selected.index());
-                $('div.spinner').removeClass("active")
-                var desc = $(item).find('div.spinner').addClass("active").data('desc');
-                $('div.descriptions div').removeClass("show");
-                $('div.descriptions div.'+desc).addClass("show");
-                var direction = "next";
-                var rotations = 8-$selected.index();
-                if($selected.index() <= 3){
-                    rotations = $selected.index();
-                    direction = "prev";
-                }
-                for(var i = 0; i < rotations; i++){
-                    $("#radial_container").radmenu(direction);
-                }
-            },
-            angleOffset: 0 // in degrees
-        });
-        $("#radial_container").radmenu("show");
+        $('li.link').click(function(){
+            $('li.link').removeClass("active")
+            var desc = $(this).addClass("active").data('desc');
+            $('div.descriptions div').removeClass("show");
+            $('div.descriptions div.'+desc).addClass("show");
+        })
     });
 {% endblock %}
