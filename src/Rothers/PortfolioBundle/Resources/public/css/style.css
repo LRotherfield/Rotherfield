@@ -57,7 +57,7 @@ div#portfolio {
     text-align:center;
 }
 li.link { 
-    margin: 20px auto 5 auto;
+    margin: 20px auto 5px auto;
     padding: 10px;
     list-style: none;
     color:#444;
