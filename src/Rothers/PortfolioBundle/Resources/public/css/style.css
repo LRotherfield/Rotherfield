@@ -57,7 +57,7 @@ div#portfolio {
     text-align:center;
 }
 li.link { 
-    margin: 4px auto;
+    margin: 20px auto 5 auto;
     padding: 10px;
     list-style: none;
     color:#444;
@@ -65,7 +65,7 @@ li.link {
     display: block;
     background: #D9E1D9;
     border: solid 1px #D9E3EA;
-    width: 200px;
+    width: 250px;
     opacity: 0.9;
 }
 li.link.active, li.link:hover { 
