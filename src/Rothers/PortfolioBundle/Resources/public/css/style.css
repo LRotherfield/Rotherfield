@@ -35,6 +35,7 @@ section h2{
 }
 p{
     padding: 5px 0;
+    text-align: justify;
 }
 li{
     margin-left: 20px;
@@ -71,5 +72,8 @@ li.link {
 li.link.active, li.link:hover { 
     opacity: 1;
 }
-div.descriptions div{display: none;}
+div.descriptions div{
+    display: none;
+    text-align: justify;
+}
 div.descriptions div.show{display: block;}
