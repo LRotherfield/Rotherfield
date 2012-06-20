@@ -1,13 +1,10 @@
 {% extends "PortfolioBundle::layout.html.twig" %}
-{% block header %}
-    {{parent()}}
-    <h2>- {{ portfolio.title }}</h2>
-{% endblock %}
 {% block body %}
     {{parent()}}
 <div>
+    <h2 style="background:#{{ entity.colour ? entity.colour : 'FFF' }};border:solid 2px #{{ entity.border ? entity.border : 'FFF' }};">{{ entity.title }}</h2>
     <p><a href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
-    {{portfolio.description|raw}}
+    {{entity.description|raw}}
     <p><a href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
 </div>
 {% endblock %}

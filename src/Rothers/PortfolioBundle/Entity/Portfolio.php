@@ -27,6 +27,13 @@ class Portfolio
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+    
+    /**
+     * @var string $link
+     *
+     * @ORM\Column(name="link", type="string", length=255)
+     */
+    private $link;
 
     /**
      * @var string $title
@@ -41,6 +48,20 @@ class Portfolio
      * @ORM\Column(name="reference", type="string", length=255)
      */
     private $reference;
+    
+    /**
+     * @var string $colour
+     *
+     * @ORM\Column(name="colour", type="string", length=255)
+     */
+    private $colour;
+    
+    /**
+     * @var string $border
+     *
+     * @ORM\Column(name="border", type="string", length=255)
+     */
+    private $border;
 
     /**
      * @var text $description
@@ -246,5 +267,65 @@ class Portfolio
     public function getUpdated()
     {
         return $this->updated;
+    }
+
+    /**
+     * Set link
+     *
+     * @param string $link
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string 
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set colour
+     *
+     * @param string $colour
+     */
+    public function setColour($colour)
+    {
+        $this->colour = $colour;
+    }
+
+    /**
+     * Get colour
+     *
+     * @return string 
+     */
+    public function getColour()
+    {
+        return $this->colour;
+    }
+
+    /**
+     * Set border
+     *
+     * @param string $border
+     */
+    public function setBorder($border)
+    {
+        $this->border = $border;
+    }
+
+    /**
+     * Get border
+     *
+     * @return string 
+     */
+    public function getBorder()
+    {
+        return $this->border;
     }
 }

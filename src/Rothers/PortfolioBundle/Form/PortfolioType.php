@@ -11,7 +11,10 @@ class PortfolioType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('link')
             ->add('title')
+            ->add('colour')
+            ->add('border')
             ->add('reference')
             ->add('description')
             ->add('excerpt')
@@ -23,6 +26,6 @@ class PortfolioType extends AbstractType
 
     public function getName()
     {
-        return 'rothers_staticbundle_portfoliotype';
+        return 'portfoliotype';
     }
 }

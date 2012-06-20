@@ -1,3 +1,6 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+  {{parent()}}
 <h1>Portfolio edit</h1>
 
 <form action="{{ path('portfolio_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
@@ -20,3 +23,32 @@
         </form>
     </li>
 </ul>
+{% endblock %}
+{% block head_javascripts %}
+  {{parent()}}
+{% javascripts "@PortfolioBundle/Resources/public/js/colour.min.js" output="bundles/portfolio/js/colour.js"%}
+   <script src="{{ asset_url }}" ></script>
+{% endjavascripts %}
+{% endblock %}
+{% block javascripts %}
+  {{parent()}}
+$('input#portfoliotype_colour, input#portfoliotype_border').ColorPicker({
+	onSubmit: function(hsb, hex, rgb, el) {
+		$(el).val(hex);
+		$(el).ColorPickerHide();
+	},
+	onBeforeShow: function () {
+		$(this).ColorPickerSetColor(this.value);
+	}
+})
+.bind('keyup', function(){
+	$(this).ColorPickerSetColor(this.value);
+});    
+{% endblock %}
+   
+{% block stylesheets %}
+  {{parent()}}
+   {% stylesheets "@PortfolioBundle/Resources/public/css/colourpicker.css" output="bundles/portfolio/css/style.css"%}
+      <link href="{{ asset_url }}" rel="stylesheet"  />
+   {% endstylesheets %}
+{% endblock %}

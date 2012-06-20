@@ -4,7 +4,7 @@
     <div id='portfolio'>
         <ul class='list'>
             {% for entity in entities %}
-                <li class="link {% if loop.index == 1 %}active{% endif %}" data-desc="{{ entity.reference }}">	
+                <li class="link {% if loop.index == 1 %}active{% endif %}" data-desc="{{ entity.reference }}" style="background:#{{ entity.colour ? entity.colour : 'FFF' }};border:solid 2px #{{ entity.border ? entity.border : 'FFF' }};">	
                         {{ entity.name }}
                 </li>
             {% endfor %}
@@ -16,7 +16,7 @@
                 <h2>{{ entity.title }}</h2>
                 {{ entity.excerpt|raw }}
                 <p>
-                    <a href="{{ path("frontend_portfolio_show", { "name": entity.name }) }}">Full {{ entity.name }} description</a>
+                    <a href="{{ path("frontend_portfolio_show", { "link": entity.link }) }}">Full {{ entity.name }} description</a>
                 </p>
             </div>
         {% endfor %}

@@ -6,14 +6,14 @@
         
         <script src="http://www.google.com/jsapi" type="text/javascript"></script> 
         <script type="text/javascript">google.load("jquery","1");google.load("jqueryui","1");</script>
-        {% javascripts "@PortfolioBundle/Resources/public/js/jQuery.radmenu.min.js" output="bundles/RothersStaticBundle/js/radial.js"%}
-            <script src="{{ asset_url }}" ></script>
-        {% endjavascripts %}
-        {% javascripts "@PortfolioBundle/Resources/public/js/html5shiv.js" output="bundles/RothersStaticBundle/js/shiv.js"%}
+        
+        {% javascripts "@PortfolioBundle/Resources/public/js/html5shiv.js" output="bundles/portfolio/js/shiv.js"%}
             <!--[if lt IE 9]>
             <script src="{{ asset_url }}" ></script>
             <![endif]-->
         {% endjavascripts %}
+            
+        {% block head_javascripts %}{% endblock %}    
         
         {% block stylesheets %}
             {% stylesheets "@PortfolioBundle/Resources/public/css/reset.css" output="bundles/portfolio/css/reset.css"%}

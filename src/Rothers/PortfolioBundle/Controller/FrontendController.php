@@ -24,14 +24,14 @@ class FrontendController extends Controller
     }
 
     /**
-     * @Route("portfolio/{name}", name="frontend_portfolio_show")
+     * @Route("portfolio/{link}", name="frontend_portfolio_show")
      * @Template()
      */
-    public function showAction($name)
+    public function showAction($link)
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $portfolio = $em->getRepository("PortfolioBundle:Portfolio")->findOneBy(array("name" => $name));
-        return array('portfolio' => $portfolio);
+        $portfolio = $em->getRepository("PortfolioBundle:Portfolio")->findOneBy(array("link" => $link));
+        return array('entity' => $portfolio);
     }
 
 }
