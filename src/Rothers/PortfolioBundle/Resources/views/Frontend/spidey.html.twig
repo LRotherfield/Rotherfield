@@ -64,7 +64,7 @@
         imageObj.onload = function() {
             var image = new Kinetic.Image({
                 x: stage.getWidth() / 2,
-                y: stage.getHeight() / 2,
+                y: stage.getHeight(),
                 image: imageObj,
                 width: 50,
                 height: 42,
@@ -74,7 +74,7 @@
             layer.quad = {spidey: image}
             stage.add(layer);
             layer.draw();
-            animate(50,50,1,image);
+            animate(20,70,1,image);
                     
         };
         imageObj.src = "/images/spider.png";
