@@ -57,7 +57,7 @@
         var stage = new Kinetic.Stage({
             container: "container",
             width: 200,
-            height: 200
+            height: 170
         });
         var layer = new Kinetic.Layer({drawFunc: drawQuad});
         var imageObj = new Image();
@@ -74,7 +74,7 @@
             layer.quad = {spidey: image}
             stage.add(layer);
             layer.draw();
-            animate(20,70,1,image);
+            animate(30,60,1,image);
                     
         };
         imageObj.src = "/images/spider.png";
