@@ -3,7 +3,6 @@
     {{parent()}}
 <div>
     <h2 style="background:#{{ entity.colour ? entity.colour : 'FFF' }};border:solid 2px #{{ entity.border ? entity.border : 'FFF' }};">{{ entity.title }}</h2>
-    <p><a class="big_link" href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
     {{entity.description|raw}}
     <p><a class="big_link" href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
 </div>
