@@ -1,0 +1,82 @@
+<div id="container"></div>
+<script src="http://www.html5canvastutorials.com/libraries/kinetic-v3.10.1.js"></script>
+<script>
+    window.requestAnimFrame = (function(callback){
+        return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function(callback){
+            window.setTimeout(callback, 1000 / 60);
+        };
+    })();
+    
+    function animate(amplitudeX, amplitudeY, lastTime, spidey){
+        var stage = spidey.getStage();
+        var layer = spidey.getLayer();
+        var centerX = stage.getWidth() / 2;
+        var centerY = stage.getHeight() / 2;
+        var date = new Date();
+        var time = date.getTime();
+        var period = 1000;
+        if (spidey.isDragging()) {
+            amplitudeX = (spidey.getX() - centerX + 30)/Math.sin(lastTime * 2 * Math.PI / period);
+            amplitudeY = (spidey.getY() - centerY + 26.5)/Math.sin(lastTime * 1.9 * Math.PI / period);
+        } else {                  
+            if(amplitudeX != 0){
+                amplitudeX -= amplitudeX/400;
+            }
+            if(amplitudeY != 0){
+                amplitudeY -= amplitudeY/200;
+            }
+            spidey.setX(amplitudeX * Math.sin(lastTime * 2 * Math.PI / period) + centerX - 30);
+            spidey.setY(amplitudeY * Math.sin(lastTime * 1.9 * Math.PI / period) + centerY - 26.5);
+        }
+        layer.draw();
+        requestAnimFrame(function(){
+            animate(amplitudeX, amplitudeY, time, spidey);
+        });
+    }
+            
+    function drawQuad() {
+      var context = this.getContext();
+      var stage = this.getStage();
+      var layer = this.getLayer();
+      var spidey = layer.quad.spidey;
+
+      context.beginPath();
+      context.moveTo(stage.getWidth()/2, 0);
+      context.quadraticCurveTo(stage.getWidth()/2,stage.getHeight()/2 - spidey.getY()/2,spidey.getX()+25,spidey.getY()+2);
+      context.strokeStyle = "white";
+      context.lineWidth = 1;
+      context.stroke();
+    }
+    
+    window.onload = function() {
+        var stage = new Kinetic.Stage({
+            container: "container",
+            width: 200,
+            height: 200
+        });
+        var layer = new Kinetic.Layer({drawFunc: drawQuad});
+        var imageObj = new Image();
+        imageObj.onload = function() {
+            var image = new Kinetic.Image({
+                x: stage.getWidth() / 2,
+                y: stage.getHeight() / 2,
+                image: imageObj,
+                width: 50,
+                height: 42,
+                draggable: true
+            });
+            layer.add(image);                                       
+            layer.quad = {spidey: image}
+            stage.add(layer);
+            layer.draw();
+            animate(50,50,1,image);
+                    
+        };
+        imageObj.src = "/images/spider.png";
+    };
+    </script>
