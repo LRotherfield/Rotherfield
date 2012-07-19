@@ -16,7 +16,7 @@
                 <h2>{{ entity.title }}</h2>
                 {{ entity.excerpt|raw }}
                 <p>
-                    <a href="{{ path("frontend_portfolio_show", { "link": entity.link }) }}">Full {{ entity.name }} description</a>
+                    <a class="big_link" href="{{ path("frontend_portfolio_show", { "link": entity.link }) }}">Full {{ entity.name }} description</a>
                 </p>
             </div>
         {% endfor %}

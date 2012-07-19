@@ -78,3 +78,14 @@ div.descriptions div{
     text-align: justify;
 }
 div.descriptions div.show{display: block;}
+
+a.big_link{
+    display: block;
+    width: 200px;
+    border: solid 2px #333;
+    background: #646464;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+}
