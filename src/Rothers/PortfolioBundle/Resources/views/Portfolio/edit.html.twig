@@ -26,7 +26,7 @@
 {% endblock %}
 {% block head_javascripts %}
   {{parent()}}
-{% javascripts "@PortfolioBundle/Resources/public/js/colour.min.js" output="bundles/portfolio/js/colour.js"%}
+{% javascripts "@PortfolioBundle/Resources/public/js/colour.min.js" output="js/colour.js"%}
    <script src="{{ asset_url }}" ></script>
 {% endjavascripts %}
 {% endblock %}
@@ -48,7 +48,7 @@ $('input#portfoliotype_colour, input#portfoliotype_border').ColorPicker({
    
 {% block stylesheets %}
   {{parent()}}
-   {% stylesheets "@PortfolioBundle/Resources/public/css/colourpicker.css" output="bundles/portfolio/css/colourpicker.css"%}
+   {% stylesheets "@PortfolioBundle/Resources/public/css/colourpicker.css" output="css/colourpicker.css"%}
       <link href="{{ asset_url }}" rel="stylesheet"  />
    {% endstylesheets %}
 {% endblock %}
