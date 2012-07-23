@@ -23,6 +23,9 @@
             {% stylesheets "@PortfolioBundle/Resources/public/css/style.css" output="css/style.css"%}
                 <link href="{{ asset_url }}" rel="stylesheet"  />
             {% endstylesheets %}
+            {% stylesheets "@PortfolioBundle/Resources/public/css/cloudzoom.css" output="css/cloud.css"%}
+                <link href="{{ asset_url }}" rel="stylesheet"  />
+            {% endstylesheets %}
         {% endblock %}
         
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />

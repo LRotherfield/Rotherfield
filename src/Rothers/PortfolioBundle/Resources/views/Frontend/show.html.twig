@@ -10,3 +10,9 @@
     <p><a class="big_link" href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
 </div>
 {% endblock %}
+{% block head_javascripts %}
+  {{parent()}}
+    {% javascripts "@PortfolioBundle/Resources/public/js/cloud-zoom.js" output="js/cloud.js"%}
+        <script src="{{ asset_url }}" ></script>
+    {% endjavascripts %}
+{% endblock %}
