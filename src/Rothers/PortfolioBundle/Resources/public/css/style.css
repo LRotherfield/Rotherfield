@@ -1,8 +1,8 @@
 body{
     background: url('/bundles/portfolio/images/bg.png');
     font-family: 'Droid Serif', serif;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 15px;
+    line-height: 17px;
 }
 
 div.wrapper{
@@ -83,7 +83,7 @@ div.descriptions div.show{display: block;}
 
 a.big_link{
     display: block;
-    width: 200px;
+    width: 240px;
     border: solid 2px #333;
     background: #646464;
     color: #FFF;
