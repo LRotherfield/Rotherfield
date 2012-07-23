@@ -1,8 +1,11 @@
 {% extends "PortfolioBundle::layout.html.twig" %}
 {% block body %}
     {{parent()}}
-<div>
-    <h2 style="background:#{{ entity.colour ? entity.colour : 'FFF' }};border:solid 2px #{{ entity.border ? entity.border : 'FFF' }};">{{ entity.title }}</h2>
+<h2 style="background:#{{ entity.colour ? entity.colour : 'FFF' }};border:solid 2px #{{ entity.border ? entity.border : 'FFF' }};">{{ entity.title }}</h2>
+{% if entity.partial != 'none' %}
+  {% include "PortfolioBundle:Portfolio:"~entity.partial %}
+{% endif %}
+<div class="full_description">
     {{entity.description|raw}}
     <p><a class="big_link" href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
 </div>
