@@ -94,7 +94,7 @@ a.big_link{
 }
 div.gallery{
     width: 205px;
-    float: left;
+    float: right;
 }
 div.gallery ul li{
     display: block;
@@ -104,7 +104,7 @@ div.gallery ul li{
     border: solid 1px #e2e2e2;
 }
 div.full_description{
-    width: 500px;
+    width: 545px;
     float: left; 
     padding: 0 10px;
 }
