@@ -1,14 +1,14 @@
 body{
     background: url('/bundles/portfolio/images/bg.png');
     font-family: 'Droid Sans', serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
 }
 
 div.wrapper{
     width: 1024px;
     margin: 20px auto;
-    background: #444;
+    background: url('/images/left-bg.gif') #444;
     border: solid 2px #F5F5F5;
 }
 
@@ -18,10 +18,11 @@ header.header{
     padding: 10px;
 }
 header h1{
-    font-size: 30px;
+    font-size: 26px;
     line-height: 22px;
     color: #F5F5F5;
     line-height: 30px;
+
 }
 header h2{
     font-size: 20px;
@@ -30,7 +31,7 @@ header h2{
     line-height: 22px;
 }
 section h2{
-    font-size: 18px;
+    font-size: 20px;
     padding: 5px;
     line-height: 22px;
     margin: 0 0 10px 0;
