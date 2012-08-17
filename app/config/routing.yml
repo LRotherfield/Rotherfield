@@ -3,7 +3,7 @@ RothersStaticBundle:
     type:     annotation
     prefix:   /
 UserBundle:
-    resource: "@RothersUserBundle/Controller/"
+    resource: "@UserBundle/Controller/"
     type:     annotation
     prefix:   /
 

@@ -1,7 +1,7 @@
 imports:
     - { resource: parameters.ini }
     - { resource: security.yml }
-    - { resource: "@RothersUserBundle/Resources/config/config.yml" }
+    - { resource: "@UserBundle/Resources/config/config.yml" }
 
 framework:
     #esi:             ~

@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new Rothers\PortfolioBundle\PortfolioBundle(),
             new Rothers\UserExtensionBundle\UserExtensionBundle(),
-            new Rothers\UserBundle\RothersUserBundle(),
+            new Rothers\UserBundle\UserBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
         );
