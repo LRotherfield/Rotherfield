@@ -1,0 +1,102 @@
+{% extends "PortfolioBundle::layout.html.twig" %}
+{% block body %}
+    {{parent()}}
+    <h2 style="background:#FFF;border:solid 2px #000;">About me</h2>
+    <div class="full_description">
+        <p>
+            I am a PHP Web Developer with a passion for designing and 
+            developing bespoke web applications. The custom applications 
+            I tend to develop are specialist content management systems for 
+            companies that require functionality that is not readily available 
+            in off the shelf packages. I enjoy bespoke work the most as it 
+            allows me to be as creative with my code as I can and provide 
+            systems that match the clients needs exactly rather than 
+            customising a third party solution and ending up with redundent 
+            functionality. 
+        </p>
+        <p>
+            One such system I recently worked on was a property 
+            investment tool that allows users to market properties with 
+            investment details including capital growth charts and return on 
+            investment tables to prospective clients. 
+            In the administration area of the system the users can control 
+            multiple websites showing the properties and all aspects of the 
+            properties including; Price, images, dimensions, selling fractions 
+            of the property, currencies and exchange rates, capital growth 
+            rates and much more.
+        </p>
+        <p>
+            All of the above features means that this system is more of a 
+            hybrid between an investment system, a CMS and an eCommerce 
+            platform. This was one of my favorite projects due to the immense 
+            scale of it, the functionality that the system provides is 
+            awesome (if I do say so myself).
+        </p>
+        <p>
+            When developing projects such as the one described above I almost 
+            exclusively develop using the Symfony Framework. My earlier 
+            projects were developed in Symfony1.4 with which I have 3 years 
+            commercial experience. For current and new projects I use the 
+            Symfony2 Framework as it is incredibly fast and powerful not 
+            only to develop in but also when running an application on a 
+            server. I have described Symfony2 in more detail in the 
+            frameworks section. Although my favorite projects start from 
+            scratch I also enjoy working on existing systems that need 
+            additions and modifications. It is often the case that projects 
+            requiring modifications use the WordPress CMS. I find this to 
+            be a positive thing as WordPress is very powerful and relatively 
+            easy to add almost any functionality too. There is also a 
+            great developer community developing plugins for WordPress which 
+            means creating or modifying systems to add functionality is 
+            usually a reasonably fast process and I can give back to the 
+            community by writing my own plugins.
+        </p> 
+        <p>
+            Being a part of the developer community is important for me as 
+            it is probably the best way to improve development ability and to 
+            keep up to date with the latest advancements in coding. Being able 
+            to write plugins for WordPress and Bundles for Symfony2 are ways 
+            in which I can give back to the community and help my fellow 
+            developers whilst increasing my knowledge of PHP and other coding 
+            languages at the same time.
+        </p>
+        <p>
+            My journey into PHP development started in 2006 at Loughborough 
+            University: 
+        </p>
+        <ul>
+            <li>
+                I graduated from Loughborough University with a Bachelors of 
+                Science in Computer Science and a Diploma of Professional 
+                Studies.
+            </li>
+            <li>
+                My first job in PHP was as a junior PHP developer for a 
+                Cardiff based design and development agency in 2009.
+            </li>
+            <li>
+                After one year as a Junior developer I decided to go solo and 
+                created my own freelance web development company. 
+            </li>
+            <li>
+                I then worked as a freelancer until I accepted a job as a 
+                senior PHP developer for a Nottingham based creative agency.
+            </li>
+            <li>
+                My freelance work is now undertaken in a team of 3 with 2 
+                dedicated PHP developers (of which I am one) and a 
+                graphical designer.
+            </li>
+        </ul>
+        <p>
+            Outside of my vocation I am a Christian who loves Jesus and 
+            am part of an active, bible teaching church in my local 
+            neighborhood. I have a beautiful wife and two wonderful daughters 
+            who take up most of my free time and, with any free time I do 
+            have left, I am a keen wargammer with a large Grey Knights army. 
+            (If "Grey Knights" means nothing to you then just rest assured 
+            that it helps me fulfill the nerd stereotype)
+        </p>
+        <p><a class="big_link" href="{{ path("frontend_portfolio_index") }}">Back to portfolio index</a></p>
+    </div>
+{% endblock %}

@@ -33,5 +33,16 @@ class FrontendController extends Controller
         $portfolio = $em->getRepository("PortfolioBundle:Portfolio")->findOneBy(array("link" => $link));
         return array('entity' => $portfolio);
     }
+    
+    
+    /**
+     * @Route("/about-me", name="about_me")
+     * @Template()
+     * @return type
+     */
+    public function aboutAction()
+    {
+        return array();
+    }
 
 }
