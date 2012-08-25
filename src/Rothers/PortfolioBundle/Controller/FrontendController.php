@@ -36,7 +36,7 @@ class FrontendController extends Controller
     
     
     /**
-     * @Route("/about-me", name="about_me")
+     * @Route("about-me", name="about_me")
      * @Template()
      * @return type
      */
