@@ -66,6 +66,10 @@
     git=http://github.com/LRotherfield/UserBundle.git
     target=/bundles/Rothers/UserBundle
 
+[ContactBundle]
+    git=http://github.com/LRotherfield/ContactBundle.git
+    target=/bundles/Rothers/ContactBundle
+
 [doctrine-fixtures]
     git=http://github.com/doctrine/data-fixtures.git
 

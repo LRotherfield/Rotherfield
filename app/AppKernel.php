@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new Rothers\PortfolioBundle\PortfolioBundle(),
             new Rothers\UserExtensionBundle\UserExtensionBundle(),
             new Rothers\UserBundle\UserBundle(),
+            new Rothers\ContactBundle\ContactBundle(),
             new Symfony\Bundle\DoctrineFixturesBundle\DoctrineFixturesBundle(),
             new Symfony\Bundle\DoctrineMigrationsBundle\DoctrineMigrationsBundle(),
         );

@@ -17,6 +17,7 @@ header.header{
     width: 200px;
     padding: 10px;
 }
+
 header h1{
     font-size: 26px;
     line-height: 22px;
@@ -24,22 +25,26 @@ header h1{
     line-height: 30px;
 
 }
+
 header h2{
     font-size: 20px;
     padding: 15px 0 0 40px;
     float: left;
     line-height: 22px;
 }
+
 section h2{
     font-size: 20px;
     padding: 5px;
     line-height: 22px;
     margin: 0 0 10px 0;
 }
+
 p{
     padding: 8px 0;
     text-align: justify;
 }
+
 li{
     margin-left: 20px;
     padding-left: 10px;
@@ -52,14 +57,17 @@ section.body{
     padding: 10px;
     background: #FFFFFF;
 }
+
 .cb{
     clear: both;
 }
+
 div#portfolio { 
     width:350px; 
     float: left;
     text-align:center;
 }
+
 li.link { 
     margin: 20px auto 5px auto;
     padding: 10px;
@@ -72,14 +80,19 @@ li.link {
     width: 250px;
     opacity: 0.9;
 }
+
 li.link.active, li.link:hover { 
     opacity: 1;
 }
+
 div.descriptions div{
     display: none;
     text-align: justify;
 }
-div.descriptions div.show{display: block;}
+
+div.descriptions div.show{
+    display: block;
+}
 
 a.big_link{
     display: block;
@@ -93,10 +106,12 @@ a.big_link{
     cursor: pointer;
     padding: 5px;
 }
+
 div.gallery{
     width: 205px;
     float: right;
 }
+
 div.gallery ul li{
     display: block;
     list-style: none;
@@ -104,8 +119,22 @@ div.gallery ul li{
     padding: 2px;
     border: solid 1px #e2e2e2;
 }
+
 div.full_description{
     width: 545px;
     float: left; 
     padding: 0 10px;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+}
+nav ul li a{
+    display: block;
+    padding: 5px;
+    color: #FFF;
+    border: solid 1px #FFF;
+    text-decoration: none;
 }

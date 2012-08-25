@@ -64,3 +64,7 @@ twig:
     form:
         resources:
             - :Theme:form.html.twig
+
+parameters:
+    contact.to.email: "l.rotherfield@gmail.com"
+    contact.from.email: "contact@lrotherfield.com"

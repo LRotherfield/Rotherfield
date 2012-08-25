@@ -6,6 +6,10 @@ UserBundle:
     resource: "@UserBundle/Controller/"
     type:     annotation
     prefix:   /
+ContactBundle:
+    resource: "@ContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 # Internal routing configuration to handle ESI
 #_internal:
